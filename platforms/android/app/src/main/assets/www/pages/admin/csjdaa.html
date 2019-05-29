@@ -1,0 +1,124 @@
+<template>
+<div class="page">
+  <div class="navbar bg-color-csjda">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/csjda.png" height="40" width="40">
+
+      </div>
+      <div class="title">Colegio San Jose 
+        <div class="subtitle">De Alaminos</div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">Alaminos City <br>
+            Quezon Avenue 
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="csjdatf blocker">
+          <span class="subtitle text-color-green">Tuition Fee: P330 per unit</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+    <div class="fab fab-bottom-left fab-open color-theme-blue ">
+                      <a href="#" class="">
+                        <i class="material-icons">arrow_drop_up</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-top">
+                        <a href="#" class="fab-label-button">
+                            <span class="material-icons edit" onclick="pwd()">edit</span>
+                            <span class="material-icons save">save</span>
+                        </a>
+                     
+
+                      </div>
+                    </div>
+  <div class="page-content">
+    <div class="csjdatf1">
+    <div class="card">
+      <div class="card-header bg-color-csjda text-color-white">Courses Offered</div>
+      <br>
+      <p class="block blocker">
+
+
+        •  Bachelor of Arts in Philosophy <br>
+        • Bachelor of Arts in Mass Communication <br>
+        • Bachelor in Secondary Education <br>
+          Majors: English, Mathematics, Science, History, Religious/Values Education <br>
+        • Bachelor in Elementary Education <br>
+        Majors: General Education <br>
+          Special Education (SPED) <br>
+          Early Childhood Education  <br>
+        • Bachelor of Science in Business Administration <br>
+        Majors: Marketing Management <br>
+          Financial Management <br>
+          Operation Management <br>
+        • Bachelor of Science in Office Management <br>
+
+
+
+
+      </p>
+
+      
+
+      <br>
+      <br>
+    </div>
+      
+
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var csjd = $('.csjdtf');// set the content
+        var csjd1 = $('.csjdtf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedcsjd  = csjd.html();
+    localStorage.newcsjd = editedcsjd;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedcsjd1  = csjd1.html();
+    localStorage.newcsjd1 = editedcsjd1;
+  });
+
+  if(localStorage.getItem('newcsjd')) { // apply the newContent when it is exist ini localStorage
+    csjd.html(localStorage.getItem('newcsjd'));
+  }
+   if(localStorage.getItem('newcsjd1')) { // apply the newContent when it is exist ini localStorage
+    csjd1.html(localStorage.getItem('newcsjd1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

@@ -1,0 +1,107 @@
+<template>
+<div class="page">
+  <div class="navbar bg-color-kingfisher">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/kingfisher.png" height="40" width="40">
+
+      </div>
+      <div class="title">Kingfisher
+        
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">Dagupan City <br>
+              #1131 McArthur Highway, Lucao
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="kingfishertf blocker">
+          <span class="subtitle text-color-green">Tuitio Fee: P600 per unit</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+    <div class="fab fab-bottom-left fab-open color-theme-blue ">
+                      <a href="#" class="">
+                        <i class="material-icons">arrow_drop_up</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-top">
+                        <a href="#" class="fab-label-button">
+                            <span class="material-icons edit" onclick="pwd()">edit</span>
+                            <span class="material-icons save">save</span>
+                        </a>
+                     
+
+                      </div>
+                    </div>
+  <div class="page-content">
+    <div class="kingfishertf1">
+    <div class="card">
+      <div class="card-header bg-color-kingfisher text-color-white">Courses Offered</div>
+      <br>
+      <p class="block blocker">
+        • Bachelor of Science in Accountancy <br>
+        •  Bachelor of Science in Entrepreneurship <br>
+        •  Bachelor of Science in Finance <br>
+        •  Bachelor of Science in Management <br>
+        •  Bachelor of Science in Marketing <br>
+
+      </p>
+      <br>
+      <br>
+    </div>
+      
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var kingfisher = $('.kingfishertf');// set the content
+        var kingfisher1 = $('.kingfishertf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedkingfisher  = kingfisher.html();
+    localStorage.newkingfisher = editedkingfisher;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedkingfisher1  = kingfisher1.html();
+    localStorage.newkingfisher1 = editedkingfisher1;
+  });
+
+  if(localStorage.getItem('newkingfisher')) { // apply the newContent when it is exist ini localStorage
+    kingfisher.html(localStorage.getItem('newkingfisher'));
+  }
+   if(localStorage.getItem('newkingfisher1')) { // apply the newContent when it is exist ini localStorage
+    kingfisher1.html(localStorage.getItem('newkingfisher1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

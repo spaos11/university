@@ -1,0 +1,107 @@
+<template>
+<div class="page">
+  <div class="navbar bg-color-adelphi">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/adelphi.png" height="40" width="40">
+
+      </div>
+      <div class="title">The Adelphi
+        <div class="subtitle">College</div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">Lingayen <br>
+            New St E, Maniboc
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="adelphitf block">
+          <span class="subtitle text-color-green">Tuition Fee: </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  <div class="page-content">
+    
+    <div class="card">
+      <div class="card-header bg-color-adelphi text-color-white">Courses Offered</div>
+      <br>
+      <p class="block">
+
+<div class="adelphitf1">
+        • Master of Arts in Education <br>
+           o Major in: Educational Management <br>
+        Guidance and Counseling
+        • Bachelor of Secondary Education <br>
+           o Major in: English, Mathematics <br>
+        • Bachelor of Elementary Education <br>
+        • Bachelor of Science in Business Administration <br>
+           o Major in: Financial Management <br>
+        Operational Management
+        • Associate in Office Administration <br>
+
+
+</div>
+
+
+      </p>
+
+      
+
+      <br>
+      <br>
+    </div>
+      
+
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var adelphi = $('.adelphitf');// set the content
+        var adelphi1 = $('.adelphitf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedadelphi  = adelphi.html();
+    localStorage.newadelphi = editedadelphi;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedadelphi1  = adelphi1.html();
+    localStorage.newadelphi1 = editedadelphi1;
+  });
+
+  if(localStorage.getItem('newadelphi')) { // apply the newContent when it is exist ini localStorage
+    adelphi.html(localStorage.getItem('newadelphi'));
+  }
+   if(localStorage.getItem('newadelphi1')) { // apply the newContent when it is exist ini localStorage
+    adelphi1.html(localStorage.getItem('newadelphi1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

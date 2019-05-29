@@ -1,0 +1,221 @@
+<template><div class="page">
+  <div class="navbar bg-color-lnu">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/lnu.png" height="40" width="40">
+
+      </div>
+      <div class="title">Lyceum Northwestern
+        <div class="subtitle">University</div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">Dagupan City <br>
+            Tapuac District, 2400
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="lnutf blocker">
+          <span class="subtitle text-color-green">Tuition Fee: P850 per unit</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+    <div class="fab fab-bottom-left fab-open color-theme-blue ">
+                      <a href="#" class="">
+                        <i class="material-icons">arrow_drop_up</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-top">
+                        <a href="#" class="fab-label-button">
+                            <span class="material-icons edit" onclick="pwd()">edit</span>
+                            <span class="material-icons save">save</span>
+                        </a>
+                     
+
+                      </div>
+                    </div>
+  <div class="page-content">
+    <div class="lnutf1 blocker">
+      <div class="card">
+        <div class="card-header bg-color-lnu text-color-white">Offered Courses</div>
+         
+          <div class="list accordion list">
+            <ul>
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                      Post Graduate Programs
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                        • Doctor of Education <br>
+                        • Doctor of Philosophy Majors in Educational Management<br>
+                        • Doctor of Philosophy Majors in Science Education<br>
+                        • Doctor of Business Administration<br>
+                        • Doctor of Public Administration<br>
+                        • Master of Arts in Education<br>
+                        • Master of Education (Non-Thesis)(Aralin Panlipunan, Biology, Chemistry, Filipino, English, Mathematics, Social Studies, TLE)<br>
+                        • Master of Public Health<br>
+                        • Master of Business Administration<br>
+                        • Master of Arts in Nursing<br>
+                        • Doctor of Medicine<br>
+                        • Doctor of Dental Medicine (6-Year degree)<br>
+                        • Doctor of Optometry (6-Year degree)<br>
+                        • Bachelor of Laws<br>
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                     Para-Medical Programs
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                          • BS in Biology <br>
+                          • BS in Medical Laboratory Science <br>
+                          • BS in Nursing<br>
+                          • BS in Pharmacy<br>
+                          • BS in Physical Therapy<br>
+                          • BS in Psychology<br>
+                          • BS in Radiologic Technology<br>
+                          • Dental Laboratory Technology Services<br>
+                          • Graduate in Diploma in Midwifery<br>
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                     Engineering and Information Technology Programs
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                        • BS in Architecture <br>
+                        • BS in Civil Engineering <br>
+                        • BS in Computer Engineering <br>
+                        • BS in Electronics and Communications Engineer<br>
+                        • BS in Mechanical Engineering<br>
+                        • BS in Computer Science<br>
+                        • BS in Information Technology<br>
+                        • BS in Marine Engineering (3 years)<br>
+                        • BS in Marine Transportation (3 years)<br>
+                        • BS in Accountancy<br>
+                        • BS in Commerce<br>
+                        • BS in Commerce (ETEEAP)<br>
+                        • BS in Tourism Management<br>
+                        • BS in Hotel and Restaurant Management<br>
+                        • BS in Travel Management<br>
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                      Liberal Arts and Education Program
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                        • Bachelor of Arts (Liberal Arts)<br>
+                        • Bachelor of Arts in English<br>
+                        • Bachelor of Arts in Mass Communication<br>
+                        • Bachelor of Arts in Political Science<br>
+                        • Bachelor of Arts (A.B. ETEEAP)<br>
+                        • Bachelor of Elementary Education<br>
+                        • Bachelor of Secondary Education Major in Mathematics<br>
+                        • Bachelor of Secondary Education Major in Physical Science<br>
+                        • BS in Criminology<br>
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+            </ul>
+          </div>
+
+      </div>
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var lnutf = $('.lnutftf');// set the content
+        var lnutf1 = $('.lnutftf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedlnutf  = lnutf.html();
+    localStorage.newlnutf = editedlnutf;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedlnutf1  = lnutf1.html();
+    localStorage.newlnutf1 = editedlnutf1;
+  });
+
+  if(localStorage.getItem('newlnutf')) { // apply the newContent when it is exist ini localStorage
+    lnutf.html(localStorage.getItem('newlnutf'));
+  }
+   if(localStorage.getItem('newlnutf1')) { // apply the newContent when it is exist ini localStorage
+    lnutf1.html(localStorage.getItem('newlnutf1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

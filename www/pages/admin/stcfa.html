@@ -1,0 +1,120 @@
+<template>
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/stcf.png" height="40" width="40">
+
+      </div>
+      <div class="title">St. Therese College 
+        <div class="subtitle">Foundation</div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">San Carlos City <br>
+            Soriano Street, San Carlos, 2420
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="stcftf blocker">
+          <span class="subtitle text-color-green">Tuition Fee: </span>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  <div class="fab fab-bottom-left fab-open color-theme-blue ">
+                      <a href="#" class="">
+                        <i class="material-icons">arrow_drop_up</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-top">
+                        <a href="#" class="fab-label-button">
+                            <span class="material-icons edit" onclick="pwd()">edit</span>
+                            <span class="material-icons save">save</span>
+                        </a>
+                     
+
+                      </div>
+                    </div>
+  <div class="page-content">
+    <div class="stcftf1">
+       <div class="card">
+        <div class="card-header bg-color-blue text-color-white">Courses Offered</div>
+        <br>
+        <p class="block blocker">
+
+          • Bachelor of Science in Marine Transportation. <br>
+          • Bachelor of Science in Marine Engineering. <br>
+          • Associate in Computer Secretarial Course. <br>
+          • Associate in Hotel and Restaurant Management. <br>
+          • Seafarers Rating Course. <br>
+          • Bachelor of Science in Criminology Education. <br>
+          • Two Year Cruiseline Services. <br>
+          • One-Year Nursing Aide. <br>
+
+
+
+
+
+
+        </p>
+
+        
+
+        <br>
+        <br>
+      </div>
+
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var stca = $('.stcatf');// set the content
+        var stca1 = $('.stcatf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedstca  = stca.html();
+    localStorage.newstca = editedstca;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedstca1  = stca1.html();
+    localStorage.newstca1 = editedstca1;
+  });
+
+  if(localStorage.getItem('newstca')) { // apply the newContent when it is exist ini localStorage
+    stca.html(localStorage.getItem('newstca'));
+  }
+   if(localStorage.getItem('newstca1')) { // apply the newContent when it is exist ini localStorage
+    stca1.html(localStorage.getItem('newstca1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

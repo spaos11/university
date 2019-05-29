@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#2196f3">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title>Pangasinan Universities and Colleges</title>
+    <link rel="stylesheet" href="css/framework7.css">
+    <link rel="stylesheet" href="css/app.css">
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+    <link rel="icon" href="img/f7-icon.png">
+
+
+</head>
+    
+    <style type="text/css">
+
+      
+        
+    .grid > div {
+            display: block;
+            width: 40%;
+            height: 200px;
+            padding: 10px;
+            margin: 0 auto;
+            margin-right: 5px;
+            margin-left: 5px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            background: rgba(255,255,255,0.95);
+            border-radius: 10px;
+            text-align: center;
+
+        }
+    .center {
+
+        margin: auto;
+        width: 100%;
+        padding: 12px;
+    }
+
+    .output {
+            display: block;
+            line-height: normal;
+          padding: 0px 8px;
+            margin: 0px;
+          height: 38px;
+          font-size: 15px;
+          line-height: 38px;
+          min-width: 400px;
+          margin: 10px;
+        }
+
+    </style>
+
+
+<body>
+    <div id="app">
+        <div class="statusbar"></div>
+        <div class="view view-init view-right" data-url="/">
+        <div class="page">
+            
+<div class="fab fab-bottom-left fab-open color-theme-blue ">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-top">
+                        <a href="#" class="fab-label-button">
+                          <span class="material-icons">exit_to_app</span>
+                          <span class="fab-label"><b>EXIT</b></span>
+                        </a>
+                        <a href="/login/" class="fab-label-button">
+                          <span class="material-icons">account_circle</span>
+                          <span class="fab-label"><b>ADMIN</b></span>
+                        </a>
+                        <a href="/about/" class="fab-label-button">
+                          <span class="material-icons">help_outline</span>
+                          <span class="fab-label"><b>ABOUT</b></span>
+                        </a>
+
+                      </div>
+                    </div>
+        <!-- navbar-start -->
+            <div class="navbar">
+                <div class="navbar-inner">
+
+
+
+                     <div class="title sliding">Pangasinan 
+                        <div class="subtitle">
+                            Universities and Colleges
+                        </div>
+                     </div>
+
+
+                      <div class="right">
+                          <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                            <i class="icon f7-icons ios-only">search_strong</i>
+                            <i class="icon material-icons md-only">search</i>
+                          </a>
+                       </div>
+
+                       <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+                          <div class="searchbar-inner">
+                            <div class="searchbar-input-wrap">
+                              <input type="search" class="quicksearch" placeholder="Search"/>
+                              <i class="searchbar-icon"></i>
+                              <span class="input-clear-button"></span>
+                            </div>
+                            <span class="searchbar-disable-button">Cancel</span>
+                          </div>
+                        </form> 
+                    </div>
+
+                    <div class="subnavbar">
+                        <div class="subnavbar-inner">
+                            <a class="sheet-open button button-outline button-small color-white" data-sheet=".demo-sheet"><i class="material-icons">sort</i>
+                            </a>
+<!-- 
+                            <div class="output">
+                                filter
+                            </div> -->
+                        </div> 
+                    </div>
+    
+        </div>
+        <!-- end-navbar -->
+        
+            <div class="page-content">
+                    <div class="">
+
+
+                        
+                   
+                    <div class="center grid clearfix">
+
+
+                            <div class="element-item data-sheet - sancarlos - alaminos - lingayen - urdaneta - med - technology - business - education - secondary - hm - math - criminology - agriculture - low - civil - mechanical - industrial - sci" data-category="data-sheet ">
+                                <a href="/psu/">
+                                     <center><img src="img/psu.png" height="100" width="100"></center>
+                                    <div class="text-color-gray">
+                                         Pangasinan State University
+                                    </div> 
+                                </a>
+                               
+                                 <p hidden="">Lingayen, PSU</p>
+                            </div>
+
+                            <div class="element-item data-sheet dagupan - med -  technology - business - education - hm - tourism - math - high - secondary - civil - archi - sci" data-category="data-sheet">
+
+                                <a href="/upang/">
+                                    <center><img src="img/upang.png" height="100" width="100">
+                                    </center>
+                                     <div class="text-color-gray"> University of Pangasinan</div>
+                                </a>     
+
+                                <p hidden="">Dagupan, Upang</p><br>
+                            </div>
+
+                            <div class="element-item data-sheet dagupan - med - business - education - law - high - civil - mechanical - sci" data-category="data-sheet">
+
+                                <a href="/lnu/">
+                                     <center><img src="img/lnu.png" height="100" width="100"></center>
+                                        <div class="text-color-gray">
+                                            Lyceum Northwestern University
+                                        </div>
+                                </a>
+
+                               
+                                 <p hidden="">Dagupan, LNU</p><br><br>
+                            </div>
+
+                            <div class="element-item data-sheet dagupan - technology - business - tourism - hm - criminology - accountancy - education -  high" data-category="data-sheet">
+                                
+                                <a href="/ul/">
+                                    
+                                    <center><img src="img/ul.png" height="100" width="100"></center>
+                                    <div class="text-color-gray">
+                                         University of Luzon
+                                    </div>
+
+                                </a>
+
+                    
+                                <p hidden="">Dagupan, UL</p><br><br>
+                            </div>
+
+                           <!--  <div class="element-item data-sheet dagupan - technology - business - hm - tourism - high" data-category="data-sheet">
+                                
+                                <a href="/sti_dagupan/">
+                                    <center><img src="img/sti.png" height="100" width="100"></center>
+                                    <div class="text-color-gray">
+                                       STI 
+                                    </div>
+                                </a>
+
+                                <p hidden="">Dagupan, STI</p><br>
+                            </div>
+ -->
+
+                            <div class="element-item data-sheet dagupan - technology - business - accountancy - education - med - medium - sci" data-category="data-sheet">
+                                <a href="/cdd/">
+                                    <center><img src="img/cdd.png" height="100" width="100"></center>
+                                    <div class="text-color-gray">
+                                        Colegio de Dagupan
+                                    </div> 
+                                </a>
+                                
+                                
+                                <p hidden="">Dagupan, CDD</p><br><br>
+                            </div>
+
+                            <div class="element-item data-sheet dagupan - accountancy - business - high - sci" data-category="data-sheet">
+                                <a href="/kingfisher/">
+                                    <center><img src="img/kingfisher.png" height="100" width="100"></center> 
+                                
+
+                                    <div class="text-color-gray">
+                                    Kingfisher
+                                    </div>
+                                </a>
+                                
+                                
+                                <p hidden="">Dagupan, kingfisher</p><br><br>
+                            </div>
+
+
+                            <div class="element-item data-sheet dagupan - med - accountancy - technology - education - criminology - hm - medium" data-category="data-sheet">
+                            <a href="/pimsat/">
+                                
+                                <center><img src="img/pimsat.png" height="100" width="100"></center> 
+                                <div class="text-color-gray">
+                                    PIMSAT
+                                </div>
+
+
+                            </a>
+                                
+            
+                                <p hidden="">Dagupan, Pimsat</p><br><br>
+                            </div>
+
+                             <div class="element-item data-sheet alaminos - med - accountancy - technology - education - criminology - hm - tourism - medium" data-category="data-sheet">
+
+                                <a href="/pass/">
+                                    
+                                    <center><img src="img/pass.png" height="100" width="100"></center>
+                                    <div class="text-color-gray">
+                                        Philippine Accountancy and Science School
+                                    </div> 
+
+                                </a>
+                                
+                            
+                                <p hidden="">Dagupan, pass</p><br><br>
+                            </div>
+
+                             <div class="element-item data-sheet alaminos - education - business - medium - sci" data-category="data-sheet">
+
+                                <a href="/csjda/">
+                                    
+                                     <center><img src="img/csjda.png" height="100" width="100"></center> 
+                                    <div class="text-color-gray">
+                                        Colegio San Jose De Alaminos
+                                    </div>   
+
+
+                                </a>
+
+                                  
+                                <p hidden="">Alaminos, Colegio San Jose De Alaminos</p><br><br>
+                            </div>
+
+                            <div class="element-item data-sheet lingayen - education - business - low" data-category="data-sheet">
+
+                                <a href="/adelphi/">
+                                    
+                                    <center><img src="img/adelphi.png" height="100" width="100"></center> 
+                                    <div class="text-color-gray">
+                                        The Adelphi College
+                                    </div>
+
+                                </a>
+                
+                                <p hidden="">Lingayen, The Adelphi College</p><br><br>
+                            </div>
+
+                            <div class="element-item data-sheet calasiao - criminology - education - technology - hm - business - low" data-category="data-sheet">
+
+                                <a href="/pcst/">
+                                    
+                                    <center><img src="img/pcst.png" height="100" width="100"></center> 
+                                    <div class="text-color-gray">
+                                        Philippine College of Science and Technology
+                                    </div>
+
+                                </a>                             
+                                
+                                <p hidden="">Calasiao, Philippine College of Science and Technology</p><br><br>
+                            </div>
+
+
+                            <div class="element-item data-sheet sancarlos -  med - accountancy - technology - education - hm low - sci" data-category="data-sheet">
+
+                              <a href="/vmuf/">  
+                                <center><img src="img/vmuf.png" height="100" width="100"></center>
+                                <div class="text-color-gray">
+                                     Virgen Milagrosa University Foundation
+                                </div>
+                               </a>
+                                <p hidden="">san carlos, Virgen Milagrosa University Foundation</p><br><br>
+                            </div>
+
+
+                            <div class="element-item data-sheet alaminos -  business - technology - education - criminology - low - sci" data-category="data-sheet">
+
+                              <a href="/goldenwest/">  
+                                <center><img src="img/goldenwest.png" height="100" width="100"></center>
+                                <div class="text-color-gray">
+                                     Golden West Colleges 
+                                </div>
+                               </a>
+                                <p hidden="">Alaminos, Golden West Colleges</p><br><br>
+                            </div>
+
+
+                             <div class="element-item data-sheet urdaneta - med -  technology - business - education - hm - tourism - math - low - secondary - civil - archi - sci " data-category="data-sheet">
+
+                              <a href="/ucu/">  
+                                <center><img src="img/act.png" height="100" width="100"></center>
+                                <div class="text-color-gray">
+                                    Urdaneta City University
+                                </div>
+                               </a>
+                                <p hidden="">Urdaneta, Urdaneta City University</p><br><br>
+                            </div>
+
+
+                            <div class="element-item data-sheet sancarlos - med -  technology  - hm  - low - criminology - sci " data-category="data-sheet">
+
+                              <a href="/stcf/">  
+                                <center><img src="img/stcf.png" height="100" width="100"></center>
+                                <div class="text-color-gray">
+                                    St. Therese College Foundation
+                                </div>
+                               </a>
+                                <p hidden="">St. Therese College Foundation, San Carlos City</p><br><br>
+                            </div>
+
+
+
+                            <div class="element-item data-sheet sison math - secondary - education - business " data-category="data-sheet">
+
+                              <a href="/nlac/">  
+                                <center><img src="img/nlac.png" height="100" width="100"></center>
+                                <div class="text-color-gray">
+                                    Northern Luzon Adventist College
+                                </div>
+                               </a>
+                                <p hidden="">Northern Luzon Adventist College, Sison , NLAC</p><br><br>
+                            </div>
+
+
+                             <div class="element-item data-sheet urdaneta - low - math - secondary - education - business " data-category="data-sheet">
+
+                              <a href="/dwcu/">  
+                                <center><img src="img/dwcu.png" height="100" width="100"></center>
+                                <div class="text-color-gray">
+                                    Divine Word College of Urdaneta
+                                </div>
+                               </a>
+                                <p hidden="">Divine Word College of Urdaneta, Urdaneta , dwcu</p><br><br>
+                            </div>
+
+
+                            <div class="element-item data-sheet binalonan  - low - aero " data-category="data-sheet">
+
+                              <a href="/wcc/">  
+                                <center><img src="img/wcc.png" height="100" width="100"></center>
+                                <div class="text-color-gray">
+                                    WCC Aeronautical and Technological College
+                                </div>
+                               </a>
+                                <p hidden="">WCC Aeronautical and Technological College Binalonan , wcc</p><br><br>
+                            </div>
+
+
+                            <div class="element-item data-sheet urdaneta - low - technology - criminology - business - civil - industrial - med - law - secondary - education " data-category="data-sheet">
+
+                              <a href="/pu/">  
+                                <center><img src="img/pu.png" height="100" width="100"></center>
+                                <div class="text-color-gray">
+                                    Panpacific University
+                                </div>
+                               </a>
+                                <p hidden="">pu Panpacific University Urdaneta City , pu</p><br><br>
+                            </div>
+
+
+
+                            <div class="element-item data-sheet sancarlos - low - technology - business - secondary - education " data-category="data-sheet">
+
+                              <a href="/scc/">  
+                                <center><img src="img/scc.png" height="100" width="100"></center>
+                                <div class="text-color-gray">
+                                   San Carlos College
+                                </div>
+                               </a>
+                                <p hidden="">sccSan Carlos College , scc</p><br><br>
+                            </div>
+
+
+                             <div class="element-item data-sheet anda - low - secondary - education " data-category="data-sheet">
+
+                              <a href="/absury/">  
+                                <center><img src="img/absury.png" height="100" width="100"></center>
+                                <div class="text-color-gray">
+                                   Absury College
+                                </div>
+                               </a>
+                                <p hidden="">absury College Anda </p><br><br>
+                            </div>
+
+
+                            
+                        
+                        
+                    </div>
+                     </div>
+                    
+            </div> <!-- page-content-end -->
+
+            <div class="sheet-modal demo-sheet">
+                <div class="toolbar bg-color-theme2">
+                    <div class="toolbar-inner">
+                        <div class="left"></div>
+                          <div class="right">
+                            <a class="link sheet-close">Close</a>
+                          </div>
+                    </div>
+                </div>
+
+
+                <div class="sheet-modal-inner">
+                    <div class="page-content">
+                        
+                            <div class="row">
+
+                                    <div class="block list">
+                                    <div class="block-header"><b>Location</b></div>
+                                            <ul class="options">
+                                            <li><input type="checkbox" value=".lingayen" id="lingayen"><label for="lingayen">Lingayen</label></li>
+
+                                            <li><input type="checkbox" value=".dagupan" id="dagupan"><label for="dagupan">Dagupan</label></li>
+
+                                            <li><input type="checkbox" value=".alaminos" id="alaminos"><label for="alaminos">Alaminos</label></li>
+
+                                            <li><input type="checkbox" value=".sancarlos" id="sancarlos"><label for="sancarlos">San Carlos</label></li>
+
+                                            <li><input type="checkbox" value=".calasiao" id="calasiao"><label for="calasiao">Calasiao</label></li>
+
+                                            <li><input type="checkbox" value=".urdaneta" id="urdaneta"><label for="urdaneta">Urdaneta</label></li>
+
+                                            <li><input type="checkbox" value=".sison" id="sison"><label for="sison">Sison</label></li>
+
+                                            <li><input type="checkbox" value=".binalonan" id="binalonan"><label for="binalonan">Binalonan</label></li>
+
+                                            <li><input type="checkbox" value=".anda" id="anda"><label for="anda">Anda</label></li>
+
+                                            </ul>
+                                    </div>
+
+
+                                    <div class="block list">
+                                     <div class="block-header"><b>Tuition Fee (per unit)</b></div>
+                                            <ul class="options">
+                                                <li class="input-all"><input class="all" type="checkbox" value=".low" id="low"><label for="low">P0-P200</label></li>
+                                                <li><input type="checkbox" value=".medium" id="medium"><label for="medium">P200-P500</label></li>
+                                                <li><input type="checkbox" value=".high" id="high"><label for="high">P500-P1000</label></li>
+                                            </ul>
+                                    </div>
+
+                                    
+
+                            </div>
+
+                          
+                                
+                                    <div class="block list">
+                                     <div class="block-header"><b>Courses</b></div>
+                                          <div class="row">
+                                            <ul class="options col-50">
+                                                <li class="input-all"><input class="all" type="checkbox" value=".technology" id="technology"><label for="technology">Technology</label></li>
+
+                                                <li class="input-all"><input class="all" type="checkbox" value=".industrial" id="industrial"><label for="industrial">Industrial Tech.</label></li>
+
+                                                 <li class="input-all"><input class="all" type="checkbox" value=".civil" id="civil"><label for="civil">Civil Engr.</label></li>
+
+                                                 <li class="input-all"><input class="all" type="checkbox" value=".mechanical" id="mechanical"><label for="mechanical">Mechanical Engr.</label></li>
+
+
+                                                <li><input type="checkbox" value=".med" id="med"><label for="med">Medicine</label></li>
+                                                <li><input type="checkbox" value=".business" id="business"><label for="business">Business</label></li>
+                                                <li><input type="checkbox" value=".math" id="math"><label for="math">Math</label></li>
+
+                                                 <li><input type="checkbox" value=".sci" id="sci"><label for="sci">Science</label></li>
+                                               
+
+                                               
+                                                
+                                            </ul>
+
+                                            <ul class="options col-50">
+                                                
+                                                <li><input type="checkbox" value=".agriculture" id="agriculture"><label for="agriculture">Agriculture</label></li>
+                                                <li><input type="checkbox" value=".criminology" id="criminology"><label for="criminology">Criminology</label></li>
+                                                <li><input type="checkbox" value=".accountancy" id="accountancy"><label for="accountancy">Accountancy</label></li>
+                                                <li><input type="checkbox" value=".tourism" id="tourism"><label for="tourism">Tourism</label></li>
+                                                <li><input type="checkbox" value=".law" id="law"><label for="law">Law</label></li>
+                                                <li><input type="checkbox" value=".hm" id="hm"><label for="hm">Hospitality Mgmt.</label></li>
+                                                <li><input type="checkbox" value=".archi" id="archi"><label for="archi">Architecture.</label></li>
+                                                <li><input type="checkbox" value=".aero" id="aero"><label for="aero">Aeronotics</label></li>
+                                            </ul>
+
+                                            <ul class="options">
+                                                 <li><input type="checkbox" value=".education" id="education"><label for="education">Education (Elementary)</label></li>
+
+                                                <li><input type="checkbox" value=".secondary" id="secondary"><label for="secondary">Education (Secondary)</label></li>
+                                                
+                                            </ul>
+
+
+                                        </div>
+                                    </div>
+
+                       
+                      
+                    </div>
+                </div>
+
+            </div>
+
+                
+
+
+
+           
+
+
+    <!-- end-page -->
+       
+
+
+
+    </div>
+    </div>
+
+    </div>
+
+    <!-- script-isotope -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/isotope.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- script-framework -->
+    <script src="js/framework7.min.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/app.js"></script>
+
+ <!--    login -->
+  <script src="js/login.js"></script>
+
+   
+
+
+
+    
+</body>
+</html>

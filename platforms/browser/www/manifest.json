@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Pangasinan Universities and Colleges",
+  "short_name": "Pangasinan Universities and Colleges",
+  "version": "io.cordova.hellocordova",
+  "description": "Isotope grid",
+  "author": "Apache Cordova Team",
+  "icons": [],
+  "start_url": "index.html",
+  "theme_color": "#2196f3"
+}

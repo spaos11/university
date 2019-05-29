@@ -1,0 +1,192 @@
+<template>
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/nlac.png" height="40" width="40">
+
+      </div>
+      <div class="title">Northern Luzon Adventist 
+        <div class="subtitle">College</div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">Sison Pangasinan<br>
+           
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="nlactf blocker">
+          <span class="subtitle text-color-green">Tuition Fee: </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+    <div class="fab fab-bottom-left fab-open color-theme-blue ">
+                      <a href="#" class="">
+                        <i class="material-icons">arrow_drop_up</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-top">
+                        <a href="#" class="fab-label-button">
+                            <span class="material-icons edit" onclick="pwd()">edit</span>
+                            <span class="material-icons save">save</span>
+                        </a>
+                     
+
+                      </div>
+                    </div>
+  <div class="page-content">
+    <div class="nlactf1 blocker">
+      <div class="card">
+        <div class="card-header bg-color-blue text-color-white">Offered Courses</div>
+         
+          <div class="list accordion list">
+            <ul>
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                      School of Arts and Sciences
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                        • Bachelor of Arts <br>
+                        Majors: Theology| Mathematics | Science | History | English | Filipino <br><br>
+                        • Bachelor of Psychology<br>
+ 
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                     School of Education
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                          Masters of Arts in Education <br>
+                          Bachelor of Elementary Education <br>
+                          Bachelor of Secondary Education <br>
+                          Majors: English | Mathematics | Filipino | Science | History <br>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                     Department of Business Education
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                        Bachelor of Science in Accountancy <br>
+                        Bachelor of Science in Business Administration <br>
+                        Majors: Management Accounting | Marketing Management <br>
+                        Bachelor of Science in Office Administration <br>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                      Department of Information Technology Studies
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                        Bachelor of Science in Information Technology (4 years) <br>
+                        Associate in Computer Technology (2 years) <br>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+            </ul>
+          </div>
+
+      </div>
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var nlac = $('.nlactf');// set the content
+        var nlac1 = $('.nlactf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editednlac  = nlac.html();
+    localStorage.newnlac = editednlac;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editednlac1  = nlac1.html();
+    localStorage.newnlac1 = editednlac1;
+  });
+
+  if(localStorage.getItem('newnlac')) { // apply the newContent when it is exist ini localStorage
+    nlac.html(localStorage.getItem('newnlac'));
+  }
+   if(localStorage.getItem('newnlac1')) { // apply the newContent when it is exist ini localStorage
+    nlac1.html(localStorage.getItem('newnlac1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

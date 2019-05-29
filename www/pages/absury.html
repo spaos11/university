@@ -1,0 +1,106 @@
+<template>
+<div class="page">
+  <div class="navbar bg-color-cdd">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/absury.png" height="40" width="40">
+
+      </div>
+      <div class="title">Absury College
+        <div class="subtitle"></div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+     
+        <div class="left">
+          <span class="subtitle text-color-orange">Anda <br>
+            Luna Street, Poblacion
+          </span>
+        </div>
+
+        <div class="right">
+             <div class="absurytf block">
+
+          <span class="subtitle text-color-green">Tuition Fee: </span>
+        </div>
+</div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="page-content">
+    
+    <div class="card">
+      <div class="card-header bg-color-cdd text-color-white">Courses Offered</div>
+      <br>
+      <p class="block">
+      <div class="absurytf1">
+ 
+        • Liberal Arts <br>
+        • Major in: English, Christian Education, Pilipino <br><br>
+        • Bachelor of Secondary Education (BSE) <br>
+        • Major in: Math, Pilipino, English <br><br>
+        • Bachelor of Elementary Education (BEE) <br>
+        • Major in: Math, Pilipino, English <br><br>
+
+
+
+</div>
+
+
+
+      </p>
+
+      
+
+      <br>
+      <br>
+    </div>
+      
+
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var absury = $('.absurytf');// set the content
+        var absury1 = $('.absurytf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedabsury  = absury.html();
+    localStorage.newAbsury = editedabsury;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedabsury1  = absury1.html();
+    localStorage.newAbsury1 = editedabsury1;
+  });
+
+  if(localStorage.getItem('newAbsury')) { // apply the newContent when it is exist ini localStorage
+    absury.html(localStorage.getItem('newAbsury'));
+  }
+   if(localStorage.getItem('newAbsury1')) { // apply the newContent when it is exist ini localStorage
+    absury1.html(localStorage.getItem('newAbsury1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>
+

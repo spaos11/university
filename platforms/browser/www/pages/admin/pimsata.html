@@ -1,0 +1,116 @@
+<template>
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/pimsat.png" height="40" width="40">
+
+      </div>
+      <div class="title">PIMSAT
+        <div class="subtitle">College</div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">Dagupan City <br>
+            MC Arthur Hi-way
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="pimsattf blocker">
+          <span class="subtitle text-color-green">Tuition Fee: P448 per unit</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+    <div class="fab fab-bottom-left fab-open color-theme-blue ">
+                      <a href="#" class="">
+                        <i class="material-icons">arrow_drop_up</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-top">
+                        <a href="#" class="fab-label-button">
+                            <span class="material-icons edit" onclick="pwd()">edit</span>
+                            <span class="material-icons save">save</span>
+                        </a>
+                     
+
+                      </div>
+                    </div>
+  <div class="page-content">
+    <div class="pimsattf1">
+    <div class="card">
+      <div class="card-header bg-color-blue text-color-white">Courses Offered</div>
+      <br>
+      <p class="block blocker">
+        • BS Nursing <br>
+        • BS Marine Transportation <br>
+        • BS Marine Engineering <br>
+        • BS Accountancy <br>
+        • BS Business Administration <br>
+        • BS Electrical Engineering <br>
+        • BS Electronics and Communication Engineering <br>
+        • BS Computer Science <br>
+        • BS Information Technology <br>
+        • BS Criminology <br>
+        • BS Hotel and Restaurant Management <br>
+        • Bachelor in Elementary Education <br>
+        • Bachelor in Secondary Education <br>
+
+
+      </p>
+      <br>
+      <br>
+    </div>
+      
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var pimsat = $('.pimsattf');// set the content
+        var pimsat1 = $('.pimsattf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedpimsat  = pimsat.html();
+    localStorage.newpimsat = editedpimsat;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedpimsat1  = pimsat1.html();
+    localStorage.newpimsat1 = editedpimsat1;
+  });
+
+  if(localStorage.getItem('newpimsat')) { // apply the newContent when it is exist ini localStorage
+    pimsat.html(localStorage.getItem('newpimsat'));
+  }
+   if(localStorage.getItem('newpimsat1')) { // apply the newContent when it is exist ini localStorage
+    pimsat1.html(localStorage.getItem('newpimsat1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

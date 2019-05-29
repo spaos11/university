@@ -1,0 +1,102 @@
+<template>
+<div class="page">
+  <div class="navbar bg-color-vmuf">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/dwcu.png" height="40" width="40">
+
+      </div>
+      <div class="title">Divine Word College 
+        <div class="subtitle">of Urdaneta</div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">Urdaneta City <br>
+            J. P. Rizal St., Bayaoas
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="dwcutf">
+          <span class="subtitle text-color-green">........</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  <div class="page-content">
+    <div class="dwcucon" >
+      <div class="card">
+        <div class="card-header bg-color-vmuf text-color-white">Offered Courses</div>
+          <br>
+
+        <p class="block">
+          •  Bachelor of Arts - Psychology <br>
+          •  Bachelor of Secondary Education - English <br>
+          •  Bachelor of Secondary Education - Filipino <br>
+          •  Bachelor of Secondary Education - General Science <br>
+          •  Bachelor of Secondary Education - Mathematics <br>
+          •  Bachelor of Secondary Education - Values Education <br>
+          •  Bachelor of Science in Computer Science <br>
+          •  Bachelor of Science in Secretarial Administration - Computer Education <br>
+          •  Bachelor of Commerce Major in Banking and Finance <br>
+          •  Bachelor of Commerce Major in Management <br>
+          •  Bachelor of Commerce Major in Management Accounting <br>
+          •  Bachelor of Commerce Major in Marketing <br>
+
+        </p>       
+            
+
+
+
+      </div>
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var dwcua = $('.dwcuatf');// set the content
+        var dwcua1 = $('.dwcuatf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editeddwcua  = dwcua.html();
+    localStorage.newdwcua = editeddwcua;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editeddwcua1  = dwcua1.html();
+    localStorage.newdwcua1 = editeddwcua1;
+  });
+
+  if(localStorage.getItem('newdwcua')) { // apply the newContent when it is exist ini localStorage
+    dwcua.html(localStorage.getItem('newdwcua'));
+  }
+   if(localStorage.getItem('newdwcua1')) { // apply the newContent when it is exist ini localStorage
+    dwcua1.html(localStorage.getItem('newdwcua1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

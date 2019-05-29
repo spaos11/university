@@ -1,0 +1,111 @@
+<template>
+<div class="page">
+  <div class="navbar bg-color-pass">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/pass.png" height="40" width="40">
+
+      </div>
+      <div class="title">Philippine Accountancy
+        <div class="subtitle">and Science School</div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">Alaminos City <br>
+            Quezon Avenue
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="passtf blocker">
+          <span class="subtitle text-color-green">Tuition Fee: 386 per unit</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+   <div class="fab fab-bottom-left fab-open color-theme-blue ">
+                      <a href="#" class="">
+                        <i class="material-icons">arrow_drop_up</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-top">
+                        <a href="#" class="fab-label-button">
+                            <span class="material-icons edit" onclick="pwd()">edit</span>
+                            <span class="material-icons save">save</span>
+                        </a>
+                     
+
+                      </div>
+                    </div>
+  <div class="page-content">
+    <div class="passtf">
+    <div class="card">
+      <div class="card-header bg-color-pass text-color-white">Courses Offered</div>
+      <br>
+      <p class="block blocker">
+        • Accountancy <br>
+        • Criminology <br>
+        • Education <br>
+        • Business Administration <br>
+        • Computer Science <br>
+        • Hospitality Management <br>
+        • Tourism Management <br>
+
+
+
+      </p>
+      <br>
+      <br>
+    </div>
+      
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var pass = $('.passtf');// set the content
+        var pass1 = $('.passtf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedpass  = pass.html();
+    localStorage.newpass = editedpass;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedpass1  = pass1.html();
+    localStorage.newpass1 = editedpass1;
+  });
+
+  if(localStorage.getItem('newpass')) { // apply the newContent when it is exist ini localStorage
+    pass.html(localStorage.getItem('newpass'));
+  }
+   if(localStorage.getItem('newpass1')) { // apply the newContent when it is exist ini localStorage
+    pass1.html(localStorage.getItem('newpass1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

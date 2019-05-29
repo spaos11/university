@@ -1,0 +1,117 @@
+<template>
+<div class="page">
+  <div class="navbar bg-color-adelphi">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/wcc.png" height="40" width="40">
+
+      </div>
+      <div class="title">WCC Aeronautical and 
+        <div class="subtitle"> Technological  College</div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">Binalonan <br>
+            WCC AeroTech Bldg,Bgy. Linmansangan
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="wcctf blocker">
+          <span class="subtitle text-color-green">Tuition Fee: </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  <div class="fab fab-bottom-left fab-open color-theme-blue ">
+                      <a href="#" class="">
+                        <i class="material-icons">arrow_drop_up</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-top">
+                        <a href="#" class="fab-label-button">
+                            <span class="material-icons edit" onclick="pwd()">edit</span>
+                            <span class="material-icons save">save</span>
+                        </a>
+                     
+
+                      </div>
+                    </div>
+  <div class="page-content">
+     <div class="wcctf1">
+      <div class="card">
+        <div class="card-header bg-color-adelphi text-color-white">Offered Courses</div>
+          <br>
+
+        <p class="block blocker">
+          •  Bachelor of Arts - Psychology <br>
+          •  Bachelor of Secondary Education - English <br>
+          •  Bachelor of Secondary Education - Filipino <br>
+          •  Bachelor of Secondary Education - General Science <br>
+          •  Bachelor of Secondary Education - Mathematics <br>
+          •  Bachelor of Secondary Education - Values Education <br>
+          •  Bachelor of Science in Computer Science <br>
+          •  Bachelor of Science in Secretarial Administration - Computer Education <br>
+          •  Bachelor of Commerce Major in Banking and Finance <br>
+          •  Bachelor of Commerce Major in Management <br>
+          •  Bachelor of Commerce Major in Management Accounting <br>
+          •  Bachelor of Commerce Major in Marketing <br>
+
+        </p>       
+            
+
+
+
+      </div>
+
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var wcc = $('.wcctf');// set the content
+        var wcc1 = $('.wcctf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedwcc  = wcc.html();
+    localStorage.newwcc = editedwcc;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedwcc1  = wcc1.html();
+    localStorage.newwcc1 = editedwcc1;
+  });
+
+  if(localStorage.getItem('newwcc')) { // apply the newContent when it is exist ini localStorage
+    wcc.html(localStorage.getItem('newwcc'));
+  }
+   if(localStorage.getItem('newwcc1')) { // apply the newContent when it is exist ini localStorage
+    wcc1.html(localStorage.getItem('newwcc1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

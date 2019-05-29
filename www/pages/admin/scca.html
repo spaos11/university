@@ -1,0 +1,219 @@
+<template>
+<div class="page">
+  <div class="navbar bg-color-ul">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/scc.png" height="40" width="40">
+
+      </div>
+      <div class="title">San Carlos 
+        <div class="subtitle">College </div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">San Carlos City <br>
+            Mabini St
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="scctf blocker">
+          <span class="subtitle text-color-green">Tuition Fee: </span>
+   
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<div class="fab fab-bottom-left fab-open color-theme-blue ">
+                      <a href="#" class="">
+                        <i class="material-icons">arrow_drop_up</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-top">
+                        <a href="#" class="fab-label-button">
+                            <span class="material-icons edit" onclick="pwd()">edit</span>
+                            <span class="material-icons save">save</span>
+                        </a>
+                     
+
+                      </div>
+                    </div>
+  <div class="page-content">
+    <div class="scctf1 blocker">
+      <div class="card">
+        <div class="card-header bg-color-ul text-color-white">Offered Courses</div>
+         
+          <div class="list accordion list">
+            <ul>
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                     Graduate School
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                        Master of Arts in Education (MAEd) <br>
+                        - Major in Educational Administration <br>
+                        
+                       
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                      College of Teachers Education 
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                          
+                        Bachelor of Elementary Education (BEEd - Gen. Ed.) <br>
+                        (PACUCOA Level II First Re-Accredited Status) <br> <br>
+ 
+                        Bachelor of Elementary Education (BEEd)  <br>
+                        (PACUCOA Level II First Re-Accredited Status) <br>
+                        Areas of Specialization: Early Childhood Education, Special Education <br><br>
+
+                        Bachelor of Secondary Education (BSEd) <br>
+                        (Level II First Re-Accredited Status) <br>
+                        Areas of Specialization: Biological Science, Social Studies, English, Mathematics, Filipino; Music, Arts, PE and Health <br>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+               
+
+
+
+
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                     College of Accountancy and Business Administration
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                          Bachelor of Science in Accountancy <br>
+
+                          Bachelor of Science in Business Administration <br>
+                          Major: Human Resource Development Management and Marketing Management <br>
+ 
+                          Two-Year Junior Secretarial Course (JSC) <br>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="accordion-item">
+                  <a href="#" class="item-link item-content">
+                  <div class="item-inner">
+                    <div class="item-title">
+                    College of Information and Computing Studies
+                    </div>
+                  </div>
+                  </a>
+
+                  <div class="accordion-item-content">
+                    <div class="card">
+                      <div class="card-content card-content-padding">
+                        Bachelor of Science in Computer Science (BSCS) <br>
+                        (PACUCOA Level 1 Accredited Status) <br>
+                        Areas of Specialization: Pure CS, Business Analytics <br><br> 
+
+                        Bachelor of Science in Information Technology (BSIT) <br>
+                        (PACUCOA Level 1 Accredited Status) <br><br>
+
+                        Bachelor of Science in Information System (BSIS) <br>
+                        Areas of Specialization: Pure IS, Service Management <br><br>
+
+                        Two-Year Associate in Computer Technology (ACT) <br>
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+
+            </ul>
+          </div>
+
+      </div>
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var scc = $('.scctf');// set the content
+        var scc1 = $('.scctf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedscc  = scc.html();
+    localStorage.newscc = editedscc;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedscc1  = scc1.html();
+    localStorage.newscc1 = editedscc1;
+  });
+
+  if(localStorage.getItem('newscc')) { // apply the newContent when it is exist ini localStorage
+    scc.html(localStorage.getItem('newscc'));
+  }
+   if(localStorage.getItem('newscc1')) { // apply the newContent when it is exist ini localStorage
+    scc1.html(localStorage.getItem('newscc1'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>
+

@@ -1,0 +1,106 @@
+<template>
+<div class="page">
+  <div class="navbar bg-color-golden">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+
+        
+
+        <img src="img/goldenwest.png" height="40" width="40">
+
+      </div>
+      <div class="title">Golden West
+        <div class="subtitle">Colleges</div>
+      </div>
+    </div>
+
+
+    <div class="subnavbar bg-color-black">
+      <div class="subnavbar-inner">
+        
+        <div class="left">
+          <span class="subtitle text-color-orange">Alaminos City <br>
+            Don Jose Drive 
+          </span>
+        </div>
+
+        <div class="right">
+          <div class="goldenwesttf block">
+          <span class="subtitle text-color-green">Tuition Fee: </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  <div class="page-content">
+    <div class="goldenwesttf1">
+    <div class="card">
+      <div class="card-header bg-color-golden text-color-white">Courses Offered</div>
+      <br>
+      <p class="block">
+
+
+      •  BS in Civil Engineering   <br>
+      •  Bachelor of Elementary Education   <br>
+      •  Bachelor of Secondary Education   <br>
+      •  BS in Industrial Education   <br>
+      •  BS in Criminology   <br>
+      •  BS in Computer Science   <br>
+      •  BS in Information Technology   <br>
+      •  BS in Business Administration   <br>
+
+
+
+
+
+
+      </p>
+
+      
+
+      <br>
+      <br>
+    </div>
+      
+</div>
+</div>
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var goldenwesttf1 = $('.goldenwesttf1tf');// set the content
+        var goldenwesttf11 = $('.goldenwesttf1tf1');// set the content
+
+  $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedgoldenwesttf1  = goldenwesttf1.html();
+    localStorage.newgoldenwesttf1 = editedgoldenwesttf1;
+  });
+   $('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+    var editedgoldenwesttf11  = goldenwesttf11.html();
+    localStorage.newgoldenwesttf11 = editedgoldenwesttf11;
+  });
+
+  if(localStorage.getItem('newgoldenwesttf1')) { // apply the newContent when it is exist ini localStorage
+    goldenwesttf1.html(localStorage.getItem('newgoldenwesttf1'));
+  }
+   if(localStorage.getItem('newgoldenwesttf11')) { // apply the newContent when it is exist ini localStorage
+    goldenwesttf11.html(localStorage.getItem('newgoldenwesttf11'));
+  }
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>
